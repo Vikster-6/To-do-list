@@ -73,7 +73,7 @@ function addTask(e) {
 };
 
 function removeTask(e) {
-    if(e.target.classList.contains("del")){
+    if(e.target.classList.contains("clear")){
         if(confirm("Are you sure?")){
             e.target.parentElement.remove()
         }
