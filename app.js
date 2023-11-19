@@ -73,7 +73,7 @@ function addTask(e) {
 };
 
 function removeTask(e) {
-    if(e.target.classList.contains("clear")){
+    if(e.target.classList.contains("del")){
         if(confirm("Are you sure?")){
             e.target.parentElement.remove()
         }
@@ -82,3 +82,21 @@ function removeTask(e) {
 }
 
 
+
+// clear.onclick = function removeTask(e) {
+//     if(e.target.id.contains("#clear")){
+//         if(confirm("Are you sure?")){
+//             e.target.lists.remove()
+//         }
+//         console.log(e.target)   
+//     }
+// }
+clear.onclick = function removeTask(e) {
+    if (e.target.id === "clear") { 
+        if (confirm("Are you sure?")) {
+            e.target.parentNode>lists.remove();
+            location.reload();
+        }
+    }
+    console.log(e.target);
+}
